@@ -1,0 +1,22 @@
+<%- include ('layout/header') %>
+<%- include ('layout/nav') %>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/styleAddContact.css">
+</head>
+
+<div class="container">
+    <center><h2>Add New Contact</h2></center>
+    <form id="addContactForm" method="post" action="/contact/add">
+        <input type="hidden" name="action" value="saveContact">
+        <p><label for="name">Name:</label></p>
+        <p><input type="text" id="name" name="name" required></p>
+        <p><label for="hp">Phone Number:</label></p>
+        <p><input type="text" id="hp" name="hp" pattern="^08\d{9,10}$" required></p>
+        <p><label for="email">Email:</label></p>
+        <p><input type="email" id="email" name="email" required></p>
+        <button type="submit">Add Contact</button>
+    </form>
+</div>
+
+<%- include ('layout/footer') %>

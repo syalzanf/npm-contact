@@ -1,0 +1,56 @@
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container p {
+    margin: 10px 0;
+}
+
+/* Styling untuk judul form */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: inline-block;
+    width: 150px; /* Lebar label, sesuaikan sesuai kebutuhan */
+    text-align: left;
+}
+
+/* Styling untuk input text */
+input[type="text"],
+input[type="email"] {
+    width: 500%; /* Lebar input 100% dari container */
+    max-width: 460px; /* Batasi lebar input agar tidak melebihi container */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling untuk tombol submit */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: right; /* Mengatur posisi tombol submit ke kanan */
+    margin-top: 10px; /* Spasi atas tombol submit */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}

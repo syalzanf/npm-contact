@@ -1,0 +1,92 @@
+<%- include ('layout/header', { title: 'details-contact Page' }) %>
+<%- include ('layout/nav') %>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<div class="container">
+    <div class="actions">
+        <div class="menu-icon">
+            <div id="action-dropdown" class="dropdown-content">
+                <a href="/contact/edit/<%= contact.name %>">Edit</a>
+                <form method="post" action="/delete-contact/<%= contact.name %>">
+                    <button class="delete-button">Delete</button>
+                </form>
+            </div>
+            <i class="fas fa-ellipsis-h icon-menu"></i>
+        </div>
+    </div>
+
+    <h2>Contact</h2>
+
+    <% if (contact) { %>
+        <p>Name: <%= contact.name %></p>
+        <p>Phone: <%= contact.hp %></p>
+        <p>Email: <%= contact.email %></p>
+    <% } else { %>
+        <p>Contact not found.</p>
+    <% } %>
+</div>
+
+<%- include ('layout/footer') %>
+
+<style>
+
+    /* ... gaya lain ... */
+    .actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .menu-icon {
+        position: relative;
+        display: inline-block;
+        margin-left: auto;
+    }
+    .icon-menu {
+        font-size: 18px; /* Ubah ukuran sesuai preferensi */
+        cursor: pointer;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px 0;
+        min-width: 60px;
+        z-index: 100;
+    }
+    .dropdown-content a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: black;
+        transition: background-color 0.2s, color 0.2s; /* Animasi perubahan warna */
+    }
+    .dropdown-content a:hover {
+        background-color: #f0f0f0; /* Warna latar belakang ketika diarahkan */
+        color: #333; /* Warna teks ketika diarahkan */
+    }
+    .menu-icon:hover .dropdown-content {
+        display: block;
+    } .delete-button {
+        background-color: white;
+        border: none;
+        color: black;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 8px 16px;
+        transition: background-color 0.2s, color 0.2s;
+    }
+
+    .delete-button:hover {
+        background-color: #f0f0f0;
+        color: #333;
+    }
+</style>
+
+

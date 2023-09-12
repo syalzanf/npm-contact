@@ -1,0 +1,5 @@
+.gambar-bulat {
+    width: 200px; /* Atur lebar gambar */
+    height: 200px; /* Atur tinggi gambar yang sama dengan lebar untuk membuat lingkaran */
+    border-radius: 50%; /* Mengubah gambar menjadi bentuk bulat */
+  }

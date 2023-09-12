@@ -1,0 +1,57 @@
+<%- include ('layout/header') %>
+<%- include ('layout/nav') %>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= title %></title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #DFDCF3;
+                color: #333;
+            }
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 40px;
+                text-align: justify;
+            }
+            h1 {
+                color: #063b44;
+            }
+            p {
+                line-height: 1.6;
+            }
+            .profile-img {
+                max-width: 300px;
+                height: auto;
+                border-radius: 50%;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+    
+    <div class="container">
+        <h1>About Me</h1>
+        
+        <!-- Menampilkan gambar menggunakan express.static -->
+        <img src="/images/foto.jpg" alt="My Profile" class="gambar-bulat">
+        
+        <p>Hai semuanya! Saya Syalza, seorang siswa di tingkat akhir di SMKN 1 Katapang. Saya senang berbagi sedikit tentang diri saya dan perjalanan pendidikan saya di sini.</p>
+        
+        <p>Sebagai seorang siswa SMK, saya fokus pada Pengembangan Perangkat Lunak dan Gim (PPLG), di mana saya belajar tentang  bahasa pemrograman, pengembangan aplikasi, desain antarmuka, manajemen basis data, analisis kebutuhan sistem, pengujian perangkat lunak, dan konsep-konsep lain yang terkait dengan teknologi informasi dan rekayasa perangkat lunak. Saya sangat tertarik dengan bahasa pemrograman dan teknologi terbaru, dan saya berusaha untuk terus mengembangkan keterampilan dan pengetahuan saya di bidang ini.</p>
+        
+        <p>Di luar jam pelajaran, saya juga aktif di Organisasi Lingkung Seni SMKN 1 Katapang (Lisska), di mana saya diberi kesempatan menjadi bendahara dalam kegiatan tersebut. Kegiatan ini tidak hanya membantu saya menjalani pengalaman yang berharga, tetapi juga memperluas jaringan sosial saya di sekolah.</p>
+        <p>....</p>
+        <p>Terima kasih     sudah meluangkan waktu untuk membaca perkenalan singkat saya. Saya berharap dapat terus belajar dan tumbuh, serta menjalani sisa waktu saya di SMK dengan penuh semangat.</p>
+        <p>Salam,</p>
+        <p>Syalza</p>
+    </div>
+<%- include ('layout/footer') %>
